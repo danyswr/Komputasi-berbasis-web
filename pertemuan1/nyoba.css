@@ -10,6 +10,7 @@ body{
     justify-content: 10px space-between;
     padding: 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.233);
+    position: sticky;
 }
 
 .tombol{
@@ -55,35 +56,51 @@ body{
 
 
 .artikel .posisiberita{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 15px; /*jarak antar box*/ 
+    display: flex;
+    flex-direction: column;
 }
 
 .artikel .posisiberita .berita{
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     border-radius: 5px;
     background: #dcd4c6;
-    text-align: center;
-    padding: 10px 20px;
-
+    padding: 10px;
+    display: flex;
+    flex-direction: row; /* Menata gambar dan teks dalam satu baris */
+    align-items: flex-start; /* Menyelaraskan item ke atas */
+    justify-content: flex-start;
+    margin: 10px;
 }
 
 .artikel .posisiberita .berita img{
-    height: 200px;
+    width: 200px; /* Menetapkan lebar gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+    flex: 0 0 auto;
+    display: inline;
+}
+
+.artikel .posisiberita .berita .text-content {
+    max-width: 600px;
 }
 
 .artikel .posisiberita .berita h1{
     font-size: 22px;
     padding: 10px 0;
-    display: block;
-    position: relative;
+    margin: 0; /* Menghilangkan margin default */
+    text-align: left; /* Menyelaraskan judul ke kiri */
+    overflow: hidden;
+
 }
 
+
+
 .artikel .posisiberita .berita p{
-    font-size: 15px;
-    line-height: 1.8;
+    margin: 0; /* Menghilangkan margin default */
+    padding-top: 0px; /* Jarak antara judul dan paragraf */
+    flex : 1;
 }
+
+
 
 .artikel .posisiberita .berita:hover{
     box-shadow:0 10px 15px rgba(0, 0, 0, 0.53);
