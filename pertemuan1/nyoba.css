@@ -1,0 +1,91 @@
+body{
+    margin: auto;
+    background: linear-gradient(135deg, #F0EAAC,#8d8b70);
+    
+}
+
+.navi{
+    position:relative;
+    background-color: #FF8A8A; /* Warna navigasi menggunakan warna yang lebih cerah */
+    justify-content: 10px space-between;
+    padding: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.233);
+}
+
+.tombol{
+    padding: 10px 20px;
+    background-color: #F0EAAC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
+    border-radius: 10px;
+    
+}
+
+.tombol:hover{
+    background-color: #CCE0AC; /* Warna hover tombol menjadi lebih segar */
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+
+}
+/* ---------------------------------------------------------------------------- */
+
+
+.artikel{
+    background-color: #c0b6a3;
+    margin: 40px 20px; /* dia tuh mengatur jarak luar div*/
+    padding: 30px; /*mengatur jarak yang di dalam div*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.berita{
+    background-color:#d3d2c1;
+    padding: 10px;
+    display:inline-flex;
+    justify-content: space-between;
+    
+
+}
+
+.artikel .judul{
+    text-align: center;
+    padding-bottom: 15px;
+
+}
+
+
+.artikel .posisiberita{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 15px; /*jarak antar box*/ 
+}
+
+.artikel .posisiberita .berita{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #dcd4c6;
+    text-align: center;
+    padding: 10px 20px;
+
+}
+
+.artikel .posisiberita .berita img{
+    height: 200px;
+}
+
+.artikel .posisiberita .berita h1{
+    font-size: 22px;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+}
+
+.artikel .posisiberita .berita p{
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.artikel .posisiberita .berita:hover{
+    box-shadow:0 10px 15px rgba(0, 0, 0, 0.53);
+    transform: scale(1.02);
+}
