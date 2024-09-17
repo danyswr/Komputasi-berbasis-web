@@ -1,108 +1,227 @@
-body{
-    margin: auto;
-    background: linear-gradient(135deg, #F0EAAC,#8d8b70);
+body {
+    margin: 0;
+    background-color: #A79277;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400; 
+    font-style: normal;
+    font-optical-sizing: auto;
+    height: 100%;
     
 }
 
-.navi{
-    position:relative;
-    background-color: #FF8A8A; /* Warna navigasi menggunakan warna yang lebih cerah */
+
+
+a {
+    text-decoration: none;
+}
+
+.navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D1BB9E; 
     justify-content: 10px space-between;
     padding: 15px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.233);
-    position: sticky;
+    z-index: 1000;
 }
 
-.tombol{
+.tombol {
     padding: 10px 20px;
-    background-color: #F0EAAC;
+    background-color: #EAD8C0; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
     border-radius: 10px;
-    
+    color: #040528; 
 }
 
-.tombol:hover{
-    background-color: #CCE0AC; /* Warna hover tombol menjadi lebih segar */
+.tombol:hover {
+    background-color: #FFF2E1; 
     border-radius: 15px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
-
 }
+
 /* ---------------------------------------------------------------------------- */
 
+.konten {
+    display: grid;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 20px;
+    margin-top: 150px;
+}
 
-.artikel{
-    background-color: #c0b6a3;
-    margin: 40px 20px; /* dia tuh mengatur jarak luar div*/
-    padding: 30px; /*mengatur jarak yang di dalam div*/
+.isiancard {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.konten .card {
+    background-color: #D1BB9E;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #EAD8C0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.konten .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.gambar img {
+    width: 200px; 
+    height: auto;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.desaintulisan {
+    color: #040528;
+}
+
+.desaintulisan h1 {
+    margin: 0;
+    position: relative;
+    bottom: 40px;
+    left:  15px;
+}
+
+.desaintulisan p {
+    margin: 5px 0 0;
+    text-align: justify;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    padding: 50px;
+    background: white;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.container header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container form {
+    width: 100%;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-box label {
+    font-weight: bold;
+}
+
+.input-box input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.checkbox-group input[type="checkbox"] {
+    margin: 0;
+}
+
+.btnSubmit {
+    padding: 10px 20px;
+    background-color: #EAD8C0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
+    border-radius: 10px;
+    color: #040528;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnSubmit:hover {
+    background-color: #FFF2E1;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+}
+
+
+.kontenabout{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    padding: 50px;
+    background: white;
+    max-width: 600px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.kontenabout h1{
+    position: relative;
+    bottom: 20px;
+}
+
+
+
+/*-------------------------------- */
+
+footer {
+    background-color: #756550;
+    padding: 30px 0;
+    margin-top: auto;
+}
+
+.bawahan {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 0 20px;
 }
 
-.berita{
-    background-color:#d3d2c1;
-    padding: 10px;
-    display:inline-flex;
-    justify-content: space-between;
-    
-
+.bawahan a {
+    color: #040528;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px 15px; 
 }
 
-.artikel .judul{
-    text-align: center;
-    padding-bottom: 15px;
-
+.bawahan a:hover {
+    color: #FFF2E1;
 }
 
-
-.artikel .posisiberita{
-    display: flex;
-    flex-direction: column;
-}
-
-.artikel .posisiberita .berita{
-    box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    border-radius: 5px;
-    background: #dcd4c6;
-    padding: 10px;
-    display: flex;
-    flex-direction: row; /* Menata gambar dan teks dalam satu baris */
-    align-items: flex-start; /* Menyelaraskan item ke atas */
-    justify-content: flex-start;
-    margin: 10px;
-}
-
-.artikel .posisiberita .berita img{
-    width: 200px; /* Menetapkan lebar gambar */
-    margin-right: 20px; /* Jarak antara gambar dan teks */
-    flex: 0 0 auto;
-    display: inline;
-}
-
-.artikel .posisiberita .berita .text-content {
-    max-width: 600px;
-}
-
-.artikel .posisiberita .berita h1{
-    font-size: 22px;
-    padding: 10px 0;
-    margin: 0; /* Menghilangkan margin default */
-    text-align: left; /* Menyelaraskan judul ke kiri */
-    overflow: hidden;
-
-}
-
-
-
-.artikel .posisiberita .berita p{
-    margin: 0; /* Menghilangkan margin default */
-    padding-top: 0px; /* Jarak antara judul dan paragraf */
-    flex : 1;
-}
-
-
-
-.artikel .posisiberita .berita:hover{
-    box-shadow:0 10px 15px rgba(0, 0, 0, 0.53);
-    transform: scale(1.02);
+.bawahan label {
+    font-size: 16px;
+    font-weight: 500;
 }
